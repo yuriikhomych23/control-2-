@@ -23,11 +23,3 @@
     line-height: 2.5;
     
 }
-
-.color {
-    width: 400px;
-    height: 120px;
-    border: 1px solid #000;
-    display: flex;
-    justify-content:center;
-}
