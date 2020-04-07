@@ -1,12 +1,12 @@
 $(function() {
     //BOLD NORMAL
-    $('#bold').change(function() {
-    $('.text').css({'fontWeight': this.checked?'bold':'normal'});
+    $('.uil-bold').click(function() {
+    $('.text').css('fontWeight','bold');
 }),
 
     // ITALIC 
-    $('#I').click(function () {
-        $('.text').css({'fontStyle': this.checked?'italic':'normal'});
+    $('.uil-italic').click(function () {
+        $('.text').css('fontStyle', 'italic');
     }),
 
     //UNDERLINE 
