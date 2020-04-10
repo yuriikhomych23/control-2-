@@ -63,8 +63,15 @@ $(function() {
     //COLOR TEXT
 
     $('.uil-palette').click(function() {
-        $('.list__color').slideDown(600)
-    }),
+        $('.list__color').slideDown(600).css('opacity', '1')
+        $('body').css({
+            opacity: '.7',
+            filter: 'alpha(opacity=50)',
+            backgroundColor: 'black',
+            transition: 'all .5s'
+        })
+        
+    })
 
 
 
@@ -103,7 +110,7 @@ $(function() {
 // COLOR TEXT JS 
 // let textColor = document.querySelector('.text__color');
 // let text = document.querySelector('.text');
-
+// let list = document.querySelector('.list__color');
 // for(let i = 0; i < textColor.children.length; i++) {
 //     textColor.children[i].onclick = function() {
 //         text.style.color = getComputedStyle(this).backgroundColor;
