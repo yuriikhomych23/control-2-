@@ -64,18 +64,43 @@ $(function() {
 
     $('.uil-palette').click(function() {
         $('.list__color').slideDown(600)
-    })
+    }),
 
 
-    $('.text__color').each(function(ind, elem){
-        $(elem).click(function() {
-            $('.text').css('backgroundColor', $(this).color())
-        })
-    })
+
+    // $('.text__color').each(function(ind, elem){
+    //     $(ind).click(function() {
+    //         $('.text').css('backgroundColor', $(this).elem())
+    //     })
+    // })
+
+    
 
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// COLOR TEXT JS 
 // let textColor = document.querySelector('.text__color');
 // let text = document.querySelector('.text');
 
