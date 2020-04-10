@@ -10,18 +10,18 @@ $(function() {
     }),
 
     //UNDERLINE 
-    $('#underline').click(function() {
-        $('.text').css({'textDecoration': this.checked?'underline':''});
+    $('.uil-underline').click(function() {
+        $('.text').css('textDecoration', 'underline');
     }),
 
     //LINE THROUGH
-    $('#line__through').click(function() {
-        $('.text').css({'textDecoration': this.checked?'line-through':''});
+    $('.uil-minus').click(function() {
+        $('.text').css('textDecoration', 'line-through');
     }),
 
 
     //LEFT SIDE
-    $('#left').click(function() {
+    $('.uil-align-left').click(function() {
         $('.text').css({
             display: 'block',
             textAlign: 'left'
@@ -29,7 +29,7 @@ $(function() {
     }),
 
     //CENTER
-    $('#center').click(function() {
+    $('.uil-align-center').click(function() {
         $('.text').css({
             display: 'block',
             textAlign: 'center'
@@ -37,14 +37,19 @@ $(function() {
     }),
 
     //RIGHT SIDE
-    $('#right').click(function() {
+    $('.uil-align-right').click(function() {
         $('.text').css({
             display: 'block',
             textAlign: 'right'
         })
     }),
+
     //FONT FAMILT
-    $('#font').change(function() {
+    $('.uil-text-fields').click(function() {
+     $('.modal-font').css('display', 'block')
+    }),
+
+    $('.modal-font').change(function() {
         $('.text').css('fontFamily', $(this).val())
     }),
 
@@ -52,6 +57,30 @@ $(function() {
     //FONT SIZE
     $('#size').change(function() {
         $('.text').css('fontSize', $(this).val() + 'px')
+    }),
+
+
+    //COLOR TEXT
+
+    $('.uil-palette').click(function() {
+        $('.list__color').slideDown(600)
+    })
+
+
+    $('.text__color').each(function(ind, elem){
+        $(elem).click(function() {
+            $('.text').css('backgroundColor', $(this).color())
+        })
     })
 
 })
+
+
+// let textColor = document.querySelector('.text__color');
+// let text = document.querySelector('.text');
+
+// for(let i = 0; i < textColor.children.length; i++) {
+//     textColor.children[i].onclick = function() {
+//         text.style.color = getComputedStyle(this).backgroundColor;
+//     }
+// }
