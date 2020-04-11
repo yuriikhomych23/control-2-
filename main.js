@@ -77,12 +77,12 @@ $(function() {
 
     //CROSS
     $('.uil-times-square').click(function() {
-        $('.list__color').slideUp(600)
-        $('body').css({
+        $('.list__color').slideUp(500)
+            $('body').css({
             opacity: '',
             filter: '',
             backgroundColor: '',
-            transition: 'all .6s'
+            transition: 'all .5s'
         })
     }), 
 
@@ -106,7 +106,74 @@ $(function() {
     $('.images').click(function() {
         $('.text__color').css('display', 'none')
         $('.picture').css('display', 'grid')
+    }),
+
+
+    $('.uil-padlock').click(function() {
+        $('.sign__in').slideDown(500).css('display', 'block')
+        $('body').css({
+            opacity: '.7',
+            filter: 'alpha(opacity=50)',
+            backgroundColor: 'black',
+            transition: 'all .5s'
+        })
+    }),
+
+    
+    $('#btn__sign__in').click(function(){
+        console.log('Привіт')
+        if($('#login').val() == '' || $('#password').val() == '') {
+            $('.empty__value').css({
+                display: 'flex',
+                opacity: '1'
+            }) // доробити border red
+
+        } else if ($('#login').val() != '' && $('#password').val() != '') {
+            $('.empty__value').css('display', 'none')
+            $('.sign__in').slideUp(500).css({
+                display: 'none', // доробити 
+                opacity: '1'
+            })
+            $('body').css({
+            opacity: '',
+            filter: '',
+            backgroundColor: '',
+            transition: 'all .5s',
+        })
+        //change icon
+        $('.uil-lock-open-alt').css('display', 'block')
+        $('.uil-padlock').css('display', 'none')
+        }
+            
+
+    }),
+    $('.uil-expand-left').click(function(){
+            $('.header').css('display', 'none')
+            $('.second__header').css('display', 'flex')
+    }),
+
+
+    $('.uil-package').click(function() {
+        
     })
+
+
+
+
+
+
+
+
+
+
+
+    //доробити перша іконка що змінює текст
+    // $('.uil-expand-left').click(function(){
+    //         $('.header').css('display', 'none')
+    //         $('.second__header').css('display', 'flex')
+    //         $('div.text:has(p)').html('<p></p>');
+    // })
+    
 
 
 
