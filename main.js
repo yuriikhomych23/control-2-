@@ -63,18 +63,57 @@ $(function() {
     //COLOR TEXT
 
     $('.uil-palette').click(function() {
-        $('.list__color').slideDown(600).css('opacity', '1')
+        $('.list__color').slideDown(600)
         $('body').css({
             opacity: '.7',
             filter: 'alpha(opacity=50)',
             backgroundColor: 'black',
-            transition: 'all .5s'
-        })
+            transition: 'all .6s'
+        }),
+        $('.btn').css('display', 'none')
         
+    }),
+
+
+    //CROSS
+    $('.uil-times-square').click(function() {
+        $('.list__color').slideUp(600)
+        $('body').css({
+            opacity: '',
+            filter: '',
+            backgroundColor: '',
+            transition: 'all .6s'
+        })
+    }), 
+
+
+
+    //ІКОНКА З КАРТИНКИАМИ І КОЛЬОРАМИ
+    $('.uil-picture').click(function() {
+        $('.list__color').slideDown(600).css('height', '380px')
+        $('body').css({
+            opacity: '.7',
+            filter: 'alpha(opacity=50)',
+            backgroundColor: 'black',
+            transition: 'all .6s'
+        }),
+        $('.btn').css('display', 'flex')
+
+    }),
+
+
+    //КАРТИНКИ
+    $('.images').click(function() {
+        $('.text__color').css('display', 'none')
+        $('.picture').css('display', 'grid')
     })
 
 
 
+
+
+    //ЗМІНА КОЛІР ТЕКСТУ НЕ ПРАЦЮЄ ВИПРАВИТИ
+    
     // $('.text__color').each(function(ind, elem){
     //     $(ind).click(function() {
     //         $('.text').css('backgroundColor', $(this).elem())
