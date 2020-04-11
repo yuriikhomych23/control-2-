@@ -139,7 +139,7 @@ $(function() {
             filter: '',
             backgroundColor: '',
             transition: 'all .5s',
-        })
+            })
         //change icon
         $('.uil-lock-open-alt').css('display', 'block')
         $('.uil-padlock').css('display', 'none')
@@ -154,8 +154,22 @@ $(function() {
 
 
     $('.uil-package').click(function() {
-        
+        $('.parameters').slideDown(500).css('display', 'block')
+        $('body').css({
+            opacity: '.7',
+            filter: 'alpha(opacity=50)',
+            backgroundColor: 'black',
+            transition: 'all .5s'
+        })
+    }), 
+    $('.uil-times-square').click(function() {
+        $('.parameters').slideUp(500).css('display', 'none')
+        $('body').css({
+            
+            transition: 'all .5s',
+        })
     })
+
 
 
 
@@ -190,6 +204,7 @@ $(function() {
     
 
 })
+
 
 
 
